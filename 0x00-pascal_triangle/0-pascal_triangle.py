@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 ''' pascal_triangle module '''
-
-
 from math import factorial
 
 
