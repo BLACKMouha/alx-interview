@@ -20,6 +20,7 @@ Each sublist is appended to main list, and in turn the main is returned by the
 function.
 '''
 
+
 def pascal_triangle(n):
     '''
     Build a Pascal Triangle of leng @n
