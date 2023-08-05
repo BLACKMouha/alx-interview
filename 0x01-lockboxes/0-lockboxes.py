@@ -2,6 +2,7 @@
 
 '''0-lockboxes module'''
 
+
 def canUnlockAll(boxes):
     '''
     INIT visted_boxes = [False] * n
