@@ -15,6 +15,8 @@ def canUnlockAll(boxes):
     ELSE
         RETURN False
     '''
+    if len(boxes) == 0:
+        return True
 
     visited_boxes = [False] * len(boxes)
     visited_boxes[0] = True
