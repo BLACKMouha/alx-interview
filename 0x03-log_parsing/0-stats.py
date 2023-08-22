@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-'''0-stats script'''
+'''0-stats script
+Reads stdin line by line and computes metrics'''
 
 
 import re
