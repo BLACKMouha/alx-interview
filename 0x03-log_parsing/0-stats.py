@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 '''0-stats script'''
+
+
 import re
 import sys
 
