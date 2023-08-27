@@ -50,4 +50,8 @@ if __name__ == '__main__':
                 print(f'{c}: {codes[c]}')
         sys.stdin.flush()
     finally:
+        print(f'File size: {sum_size}')
+        for c in codes:
+            if codes[c] > 0:
+                print(f'{c}: {codes[c]}')
         sys.stdin.flush()
