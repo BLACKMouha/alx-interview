@@ -10,8 +10,8 @@ import re
 
 
 if __name__ == '__main__':
-    nlr = 0 # number of lines read
-    sum_size = 0 # sum of file sizes
+    nlr = 0  # number of lines read
+    sum_size = 0  # sum of file sizes
     codes = {
         '200': 0,
         '301': 0,
