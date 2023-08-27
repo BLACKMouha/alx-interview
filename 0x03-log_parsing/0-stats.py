@@ -44,7 +44,7 @@ if __name__ == '__main__':
                             print(f'{c}: {codes[c]}')
                 sys.stdin.flush()
     except (KeyboardInterrupt, EOFError) as e:
-        pass
+        print()
     finally:
         print(f'File size: {sum_size}')
         for c in codes:
