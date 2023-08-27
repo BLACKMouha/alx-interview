@@ -35,14 +35,15 @@ if __name__ == '__main__':
                     sum_size += int(file_size)
                 except ValueError as v:
                     pass
-                codes[code] += 1
-                if nlr == 10:
-                    nlr = 0
-                    print(f'File size: {sum_size}')
-                    for c in codes:
-                        if codes[c] > 0:
-                            print(f'{c}: {codes[c]}')
-                sys.stdin.flush()
+                if code in codes:
+                    codes[code] += 1
+            if nlr == 10:
+                nlr = 0
+                print(f'File size: {sum_size}')
+                for c in codes:
+                    if codes[c] > 0:
+                        print(f'{c}: {codes[c]}')
+            sys.stdin.flush()
     except (KeyboardInterrupt, EOFError) as e:
         print()
     finally:
