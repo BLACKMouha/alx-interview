@@ -22,8 +22,8 @@ if __name__ == '__main__':
         '405': 0,
         '500': 0
     }
-    regex = (r'\d+.\d+.\d+.\d+ - \[\d+-\d+\d+-\d+ \d+:\d+:\d+\.\d+\] '
-             r'\"GET \/projects\/260 HTTP\/1\.1\" (\d+) (\d+)')
+    regex = (r'\d+.\d+.\d+.\d+\s?-\s?\[\d+-\d+\d+-\d+ \d+:\d+:\d+\.\d+\] '
+             r'\"GET \/projects\/260 HTTP\/1\.1\" (\d+) \d+')
 
     try:
         for line in sys.stdin:
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         print()
     finally:
         print(f'File size: {sum_size}')
-        for c in codes:
+        for c in sorted(codes.keys()):
             if codes[c] > 0:
                 print(f'{c}: {codes[c]}')
         sys.stdin.flush()
