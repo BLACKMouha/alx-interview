@@ -10,7 +10,7 @@ def validUTF8(data):
         True when the data set follows the UTF8 rules otherwise False'''
     n_bytes = 0
     for num in data:
-        bits = bin(num).lstrip('0b').zfill(8)
+        bits = format(num & 0xFF, '08b')
         if n_bytes == 0:
             for bit in bits:
                 if bit == '0':
