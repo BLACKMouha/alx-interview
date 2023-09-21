@@ -11,20 +11,20 @@ if (process.argv.length === 3) {
   const id = process.argv[2];
   const url = 'https://swapi-api.alx-tools.com/api/films/' + id;
 
-  request.get(url, function (e, r, b) {
-    if (e) {
-      throw (e);
+  const characters_urls = request.get(url, (err, res, body) => {
+    if (err) {
+      console.error(err);
     } else {
-      const characters_urls = JSON.parse(b).characters;
-      if (characters_urls instanceof Array) {
-        characters_urls.map(character_url => {
-          request.get(character_url, function (err, res, bod) {
-            console.log(JSON.parse(bod).name);
-          });
+      const characters_urls = JSON.parse(body).characters;
+      characters_urls.forEach((Character_url) => {
+        request.get(Character_url, (e, r, b) => {
+          if (e) {
+            console.log(e);
+          } else {
+            console.log(JSON.parse(b).name);
+          }
         });
-      } else {
-        console.log([]);
-      }
+      });
     }
   });
 }
