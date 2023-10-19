@@ -2,7 +2,7 @@
 """0-island_perimeter module"""
 
 
-def island_perimeter(grid: list[int]) -> int:
+def island_perimeter(grid):
     '''Computes the perimeter of a island'''
     if not grid:
         return 0
