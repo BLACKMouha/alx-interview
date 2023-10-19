@@ -4,7 +4,7 @@
 
 def makeChange(coins: list, total: int):
     '''Making change'''
-    if total == 0:
+    if total <= 0:
         return 0
     coins = sorted(coins, reverse=True)
     numCoins = 0
@@ -13,4 +13,4 @@ def makeChange(coins: list, total: int):
         while total >= coin:
             numCoins += 1
             total -= coin
-    return numCoins if total == 0 else -1
+    return numCoins if total <= 0 else -1
